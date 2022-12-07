@@ -9,5 +9,8 @@ class Dog:
       {
         print("Bark!")
       }
+    
+    def some():
+    
   
   }
