@@ -11,6 +11,6 @@ class Dog:
       }
     
     def some():
-    
+    def some1():
   
   }
