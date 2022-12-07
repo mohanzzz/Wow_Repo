@@ -11,3 +11,6 @@ on:
 jobs:
   test-concurrency:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ format('ci-{0}-{1}', github.ref, github.actor) }}
+      cancel-in-progress: true
