@@ -30,6 +30,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Echo command
         run: |
+             echo ${{ format('ci-{0}-{1}', github.ref, github.actor) }}
              echo "This is a concurrency test"
              for i in {1..20};do echo "Hi $i"; sleep 10; done
 
