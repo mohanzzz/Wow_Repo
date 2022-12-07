@@ -1,0 +1,35 @@
+name: C-Test
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+  workflow_dispatch:
+
+concurrency:
+  # Feature branch builds from the same user are auto-cancelled when a trigger is received
+  group: ${{ format('ci-{0}-{1}', github.actor) }}
+  cancel-in-progress: true
+
+jobs:
+  # This workflow contains a single job called "test"
+  test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run Echo command
+        run: |
+             echo ${{ format('ci-{0}-{1}', github.ref, github.actor) }}
+             echo "This is a concurrency test"
+             for i in {1..20};do echo "Hi $i"; sleep 10; done
