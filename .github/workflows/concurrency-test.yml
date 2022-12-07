@@ -3,7 +3,7 @@ name: Concurrency-Test
 on:
   pull_request:
     branches:
-      - master
+      - main
     types:
       - opened
       - reopened
