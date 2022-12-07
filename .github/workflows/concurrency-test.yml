@@ -8,10 +8,9 @@ on:
       - edited
       - synchronize
 
-jobs:
-  test-concurrency:
-    name: Concurrency test
-    runs-on: ubuntu-latest
 concurrency:
-  group: ${{ github.ref }}
+  # Feature branch builds from the same user are auto-cancelled when a trigger is received
+  group: ${{ format('ci-{0}-{1}', github.ref, github.actor) }}
   cancel-in-progress: true
+
+
