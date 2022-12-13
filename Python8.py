@@ -1,4 +1,10 @@
 class Vehicle:
+
+#Global variables
+
+List = []
+tuple = ()
+
   {
   
     main():
@@ -7,7 +13,6 @@ class Vehicle:
       b = 0
     
     }
-
     
   
   
