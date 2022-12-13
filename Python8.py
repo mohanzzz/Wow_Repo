@@ -9,6 +9,7 @@ class Vehicle:
     }
     
     some1():
+    some2():
     
   
   
