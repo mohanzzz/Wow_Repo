@@ -7,8 +7,7 @@ class Vehicle:
       b = 0
     
     }
-    
-    some1():
+
     
   
   
