@@ -16,5 +16,6 @@ class Dog:
     def some3():
     def some4():
     def some5():
+    def some6():
   
   }
