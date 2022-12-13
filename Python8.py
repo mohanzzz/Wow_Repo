@@ -8,11 +8,11 @@ class Vehicle:
     
     }
     
-    some1():
     some2():
     some3():
     some4():
     some5():
+    some7():
     
   
   
