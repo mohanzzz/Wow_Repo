@@ -5,6 +5,7 @@ class Vehicle:
 List = []
 tuple = ()
 set = ( )
+string-var = ''
 
   {
   
