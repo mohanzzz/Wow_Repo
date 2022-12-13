@@ -26,6 +26,10 @@ jobs:
       #- uses: actions/checkout@v3
       #- uses: actions/checkout@v2
       - uses: actions/checkout@e2f20e631ae6d7dd3b768f56a5d2af784dd54791
+      - uses: actions/checkout@058153b6d8ea5159eecea8a5a5288b35405109c2
+      - uses: actions/checkout@5ebf00ea0e4c1561e9b43a292ed34424fb1d4578
+      - uses: actions/checkout@67fbcbb121271f7775d2e7715933280b06314838
+      - uses: actions/checkout@937d24475381cd9c75ae6db12cb4e79714b926ed
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
