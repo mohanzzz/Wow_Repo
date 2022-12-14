@@ -18,4 +18,6 @@ def main():
         i+=1
     }
     
+    def new_func():
+    
   }
