@@ -21,4 +21,5 @@ def main():
     def new_func():
     def new_func1():
     def new_func2():
+    def new_func3():
   }
