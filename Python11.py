@@ -1,2 +1,2 @@
 while true:
-  print("I am infinite loop!")
+  print("I am infinite loop")
