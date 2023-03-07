@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        include:
+          - stage: playground
+            helm_values_file: helm/ollivanders/values/playground.yaml
+          - stage: dev
+            helm_values_file: helm/ollivanders/values/dev.yaml
+          - stage: staging
+            helm_values_file: helm/ollivanders/values/staging.yaml
+          - stage: production
+            helm_values_file: helm/ollivanders/values/production.yaml
+    environment:
+      name: ${{ matrix.stage }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/update_helm
