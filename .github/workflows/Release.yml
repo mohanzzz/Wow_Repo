@@ -12,13 +12,13 @@ jobs:
       matrix:
         include:
           - stage: playground
-            helm_values_file: helm/ollivanders/values/playground.yaml
+            helm_values_file: Dramatic-School/Wow_Repo/helm/ollivanders/values/playground.yaml
           - stage: dev
-            helm_values_file: helm/ollivanders/values/dev.yaml
+            helm_values_file: Dramatic-School/Wow_Repo/helm/ollivanders/values/dev.yaml
           - stage: staging
-            helm_values_file: helm/ollivanders/values/staging.yaml
+            helm_values_file: Dramatic-School/Wow_Repo/helm/ollivanders/values/staging.yaml
           - stage: production
-            helm_values_file: helm/ollivanders/values/production.yaml
+            helm_values_file: Dramatic-School/Wow_Repo/helm/ollivanders/values/production.yaml
     environment:
       name: ${{ matrix.stage }}
 
